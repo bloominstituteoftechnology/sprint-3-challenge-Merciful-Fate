@@ -85,13 +85,11 @@
         return this.ints
       }
       getEveryNth(int) {
-        let newArr = []
-        let iteration = 0
-        while (iteration < this.ints.length - 1) {
-        newArr.push(this.ints[iteration])
-        iteration += int
+        const result = []
+        for (let i = 0 ; i < this.ints.length ; i += int) {
+          result.push(this.ints[i])
         }
-        return newArr
+        return result
       }
       getAllReversed() {
         return this.ints.reverse()
